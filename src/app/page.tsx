@@ -16,17 +16,14 @@ const Input = () => {
     const response = await fetch(`https://api.jikan.moe/v4/anime?q=${inputValue}&order_by=title&sort=asc&limit=10`);
     const data = await response.json();
     setAnimeData(data);
-    console.log(data);
     if (data.data && data.data.length > 0) {
       // Assume the first result is the most relevant
       const animeId = data.data[0].mal_id;
-      console.log('Anime ID:', animeId);
 
       // Fetch recommendations using the anime ID
       const recResponse = await fetch(`https://api.jikan.moe/v4/anime/${animeId}/recommendations`);
       const recData = await recResponse.json();
-      setAnimeRecommendations(recData.data);
-      console.log('Recommendations:', recData.data);
+      setAnimeRecommendations(recData.data.slice(0,10));
     } else {
       console.log('No anime found.');
       setAnimeRecommendations([]);
@@ -91,15 +88,6 @@ const Input = () => {
                     <Image src={rec.entry.images.jpg.image_url} alt="Image" width={300} height={300}/>
                   </div>
 
-                  <div className="mt-2 text-sm">
-                    {/* <Image src = {rec.entry.image.jpg} alt = "animeImage"/> */}
-                  </div>
-                  <div className="mt-2 text-sm text-gray-600">
-                    Score: {rec.entry.score || 'N/A'}
-                  </div>
-                  <div className="text-sm text-gray-500">
-                    Episodes: {rec.entry.episodes || 'Unknown'}
-                  </div>
                 </a>
               </div>
             ))}
@@ -126,7 +114,6 @@ const RandomAnime = () => {
   const getRandom = async () => {
     const response = await fetch('https://api.jikan.moe/v4/random/anime')
     const data = await response.json();
-    console.log(data)
     const imgSource = data.data.images.jpg.image_url;
     const animeTitle = data.data.title
     const animescore = data.data.score;
