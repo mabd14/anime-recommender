@@ -133,7 +133,7 @@ const RandomAnime = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 space-y-6">
+<div className="max-w-2xl mx-auto p-6 space-y-6">
       <button
         onClick={getRandom}
         className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
@@ -195,6 +195,7 @@ const RandomAnime = () => {
 
       )}
     </div>
+
   );
 };
 
@@ -203,11 +204,15 @@ const RandomAnime = () => {
 
 export default function Home() {
   return (
-    <div>
-      <title>Landing Page</title>
-      <TopAnimePage />
-      <Input />
-      <RandomAnime />
-    </div>
+<div className="relative h-screen w-full">
+  <div className="absolute inset-0 bg-wallscreen bg-cover bg-center" />
+  <div className="absolute inset-0 bg-white opacity-15" />
+  <div className="relative z-10">
+    <title>Landing Page</title>
+    <TopAnimePage />
+    <Input />
+    <RandomAnime />
+  </div>
+</div>
   );
 }
