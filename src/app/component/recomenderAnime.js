@@ -172,7 +172,7 @@ const ReccomenderAnime = () => {
       <div className="max-w-4xl mx-auto pt-8 pb-16">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Anime Recommender</h1>
-          <p className="text-gray-600">Search for an anime to get personalized recommendations</p>
+          <p className="text-gray-600">Search for an anime to get personalised recommendations</p>
         </div>
         
         <div className="flex flex-col items-center w-full max-w-4xl mx-auto p-6 space-y-6">
