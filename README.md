@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Anime-Reccomender
+## Project Description:
+This is a project I made. It involves the use of an API, taken from [AniList](https://anilist.co/) that uses GraphQL rather than normal REST API. It provides personalised anime reccomendations and explores random anime picks for endless entertainment.
 
-## Getting Started
+## Features:
+- Fetches anime recomendations based on user search.
+- Randomised anime section for discovering new shows.
+- User-friendly interface for browsing anime details.
 
-First, run the development server:
+## Technologies used:
+- ![TypeScript](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
+- ![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)
+- ![Tailwind](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## API Integration:
+I used the AniList GraphQL API to provide an interactive and personalised anime recommendation experience. This is also the same for the top rated anime and the randomised anime search.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Future Enchancements:
+For future updates, I want to allow users to create an account, with user authentication, so that they can save their watchlists, or add a section that when clicked, automatically saves it on the AniList account. Also to add a filtering option for genres, ratings and more options.
